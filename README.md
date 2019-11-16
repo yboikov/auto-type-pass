@@ -4,7 +4,8 @@ Finds all gpg files under ```~/.password-store/```
 match filename against current window name, if match is found auto paste password (1st line) form gpg file and sends enter key
 
 #### requirements
-```xdotool```
+```xdotool``` - install xdotool
+
 ```pass utility``` - https://www.passwordstore.org/
 
 ### install

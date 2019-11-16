@@ -2,6 +2,8 @@
 
 win_id=$(xdotool getactivewindow)
 name=$(xdotool getwindowname ${win_id})
+
+# strip everything before @ and after :
 name=${name#*@}
 name=${name%:*}
 find ~/.password-store/ -name "*.gpg" -print0 | 
