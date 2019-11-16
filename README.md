@@ -11,4 +11,21 @@ match filename against current window name, if match is found auto paste passwor
 ### install
 save script somewhere and assign keyboard shortcurt with it.
 
+### examples
+somesite.com.gpg for web login
+```
+username
+Tab
+passW0rd
+Return
+```
+
+myhostname.gpg (single line) for sudo su -
+```
+onlyPassWord
+```
+will type onlyPassWord and hit enter 
+
 ##### version: 0.0.1
+
+

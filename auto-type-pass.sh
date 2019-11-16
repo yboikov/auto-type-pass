@@ -11,8 +11,19 @@ find ~/.password-store/ -name "*.gpg" -print0 |
 	do 
 		kname=`basename ${line%.gpg}`; 
 		if grep -iq ${kname} <<<${name};
-		then 
-			PASSWORD_STORE_CLIP_TIME=1 pass -c ${kname} 
-			xdotool key --delay 50 --clearmodifiers "ctrl+v" "Return"
+		then
+			secretname=${line#*.password-store/}
+			secretname=${secretname%.gpg}
+			commands=$(PASSWORD_STORE_CLIP_TIME=1 pass show ${secretname})
+			while read -r value;
+			do
+				read -r key
+				xdotool sleep 0.2 type ${value}
+				# if there is no command after type hit enter and exit from script
+				[[ -z ${key} ]] && dotool key --delay 50 --clearmodifiers "Return" && exit 0
+				xdotool key --delay 50 --clearmodifiers "${key}"
+			done <<< ${commands}
+			exit 0
+			#xdotool key --delay 50 --clearmodifiers "ctrl+v" "Return"
 		fi; 
 	done
