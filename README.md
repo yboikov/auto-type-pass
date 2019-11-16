@@ -8,6 +8,10 @@ match filename against current window name, if match is found auto paste passwor
 
 ```pass utility``` - https://www.passwordstore.org/
 
+---
+check if you are using X11 ```loginctl show-session 2 -p Type```
+xdotool does not work with Wayland ( need to find some alternative )
+
 ### install
 save script somewhere and assign keyboard shortcurt with it.
 
