@@ -2,6 +2,7 @@
 
 Finds all gpg files under ```~/.password-store/```
 match filename against current window name, if match is found auto paste password (1st line) form gpg file and sends enter key. Works with first match, so naming is important.
+
 ---
 check if you are using X11 
 ```loginctl show-session 2 -p Type``` 
