@@ -37,6 +37,7 @@ and password must be set in <hostname>.gpg (works better with fqdn hostname ${HO
 ~/.password-store/myhostname.gpg (single line) for sudo su -
 ```
 onlyPassWord
+Return
 ```
 will type onlyPassWord and hit enter 
 
