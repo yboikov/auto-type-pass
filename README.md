@@ -32,7 +32,7 @@ passW0rd
 Return
 ```
 console title must be something like ```PROMPT_COMMAND='printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'```
-and password must be set in <hostname>.gpg (works better with fqdn hostname ${HOSTNAME} )
+and password must be set in < hostname >.gpg (works better with fqdn hostname ${HOSTNAME} )
 
 ~/.password-store/myhostname.gpg (single line) for sudo su -
 ```
