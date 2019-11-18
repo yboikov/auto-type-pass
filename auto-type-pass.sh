@@ -20,9 +20,9 @@ find ~/.password-store/ -name "*.gpg" -print0 |
 				read -r key
 				xdotool sleep 0.2 type ${value}
 				# if there is no command after type hit enter and exit from script
-				[[ -z ${key} ]] && dotool key --delay 50 --clearmodifiers "Return" && exit 0
+				[[ -z ${key} ]] && xdotool key --delay 50 --clearmodifiers "Return" && exit 0
 				xdotool key --delay 50 --clearmodifiers "${key}"
-			done <<< ${commands}
+			done < <(printf '%s\n' "$commands")
 			exit 0
 			#xdotool key --delay 50 --clearmodifiers "ctrl+v" "Return"
 		fi; 
