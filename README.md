@@ -11,6 +11,7 @@ check if you are using X11
 #### requirements
 ```xdotool``` - https://www.semicomplete.com/projects/xdotool/
 ```pass``` - https://www.passwordstore.org/
+```zenity``` - https://help.gnome.org/users/zenity/
 
 ### install
 checkout somewhere and create keyboard shortcut to it 
